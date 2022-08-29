@@ -15,7 +15,7 @@ public class MaxSumRectangleLargerThanK {
                     sum[row] += matrix[row][cE];
                 }
 
-                int currSum = Kadane(sum, k);
+                int currSum = Helper(sum, k);
                 if (currSum <= k)
                     max_Sum = Math.max(max_Sum, currSum);
             }
@@ -23,20 +23,8 @@ public class MaxSumRectangleLargerThanK {
         return max_Sum;
     }
 
-    static int Kadane(int sum[], int k) {
-        // int max_Sum_Start = Integer.MIN_VALUE, max_End = 0;
-
-        // for (int i = 0; i < sum.length; i++) {
-        //     max_End = max_End + sum[i];
-
-        //     if (max_End <= k) {
-        //         if (max_Sum_Start < max_End)
-        //             max_Sum_Start = max_End;
-        //     }
-        //     else if (max_End < 0)
-        //     max_End = 0;
-        // }
-        // return max_Sum_Start;
+    static int Helper(int sum[], int k) {
+        
         int ans=Integer.MIN_VALUE;
         
         for(int i=0;i<sum.length;i++)
