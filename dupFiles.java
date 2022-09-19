@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class duplicateFiles {
+public class dupFiles {
     static List<List<String>> findDuplicate(String[] paths) {
         HashMap<String, List<String>> hm = new HashMap<>();
 
